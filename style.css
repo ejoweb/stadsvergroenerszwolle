@@ -64,7 +64,24 @@ Text Domain: svz
  * Group block
  */
 .wp-block-group.has-background {
-	padding: var(--wp--preset--spacing--40) var(--wp--preset--spacing--40);
+	
+}
+
+/**
+ * Columns block
+ */
+.wp-block-columns.large-right .wp-block-column {
+	flex-grow: 5;
+}
+.wp-block-columns.large-right .wp-block-column:last-child {
+	flex-grow: 6;
+}
+
+.wp-block-columns.large-left .wp-block-column {
+	flex-grow: 5;
+}
+.wp-block-columns.large-left .wp-block-column:first-child {
+	flex-grow: 6;
 }
 
 
@@ -107,38 +124,83 @@ header.wp-block-template-part {
 	margin-left: auto;
 }
 
+
+/**
+ * Site navigation 
+ */
+header .wp-block-navigation {
+	margin-top: var(--wp--preset--spacing--60);
+
+}
+
+
+header .wp-block-navigation-item {}
+
+
+header .wp-block-navigation-item__content {
+	text-decoration: underline;
+	text-decoration-thickness: 4px;
+	text-decoration-color: var(--wp--preset--color--secondary);
+	text-underline-offset: 6px;
+}
+
+/* header .wp-block-navigation-item.current-menu-item .wp-block-navigation-item__content,
+header .wp-block-navigation-item:hover .wp-block-navigation-item__content {
+	text-decoration: underline;
+	text-decoration-thickness: 4px;
+	text-decoration-color: var(--wp--preset--color--secondary);
+	text-underline-offset: 6px;
+} */
+
+header .wp-block-navigation-item.uitgelicht .wp-block-navigation-item__content {
+
+	/* Button */
+	background-color: var(--wp--preset--color--tertiary);
+	color: var(--wp--preset--color--base);
+	padding: var(--wp--preset--spacing--30) !important;
+	text-decoration: none !important;
+	border-radius: var(--wp--custom--border-radius--small);
+}
+
+
+header .wp-block-navigation__responsive-container-close svg, .wp-block-navigation__responsive-container-open svg {
+	width: 36px;
+	height: 36px;
+}
+
+/* Mobile */
+header .wp-block-navigation__responsive-container.is-menu-open .wp-block-navigation__responsive-container-content .wp-block-navigation-item__content {
+
+}
+
+
 /**
  * Site main 
  */
 
 
 /**
- * Banner 
+ * Site Banner 
  */
-main > .wp-block-post-content:first-child > .wp-block-cover:first-child,
-main > .wp-block-cover:first-child {
+main > .wp-block-post-content:first-child > .wp-block-cover:first-child {
 	min-height: var(--wp--custom--spacing--banner-height);
 }
 
-main > .wp-block-post-content:first-child > .wp-block-cover:first-child > .wp-block-cover__inner-container,
-main > .wp-block-cover:first-child > .wp-block-cover__inner-container {
-	max-width: 640px;
+main > .wp-block-post-content:first-child > .wp-block-cover:first-child > .wp-block-cover__inner-container > .wp-block-group.has-background {
+	padding: var(--wp--preset--spacing--40) var(--wp--preset--spacing--50);
+	border-radius: var(--wp--custom--border-radius--small);
 }
+	
 
-main > .wp-block-post-content:first-child > .wp-block-post-featured-image:first-child img,
-main > .wp-block-post-featured-image:first-child img,
-main > .wp-block-post-content:first-child > .wp-block-image:first-child img,
-main > .wp-block-image:first-child img {
-	height: var(--wp--custom--spacing--banner-height);
-	object-fit: cover;
-	border-radius: 0;
-}
 
 
 /**
  * Site footer 
  */
 
+footer.wp-block-template-part {
+	margin-block-start: 0;
+}
 
 
 /* ----------------------------- CUSTOM CLASSES ----------------------------- */

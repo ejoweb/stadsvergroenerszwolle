@@ -62,10 +62,10 @@
 			],
 			"fontSizes": [
 				{ "name": "Small",    "slug": "small",    "size": "clamp(0.875rem, 4vw, 1rem)" },
-				{ "name": "Medium",   "slug": "medium",   "size": "clamp(1.125rem, 3vw, 1.333rem)" },
-				{ "name": "Large",    "slug": "large",    "size": "clamp(1.333rem, 4vw, 1.75rem)" },
-				{ "name": "X-large",  "slug": "x-large",  "size": "clamp(2rem, 4vw, 2.5rem)" },
-				{ "name": "XX Large", "slug": "xx-large", "size": "clamp(2.5rem, 6vw, 3.5rem)" }
+				{ "name": "Medium",   "slug": "medium",   "size": "clamp(1.125rem, 3vw, 1.125rem)" },
+				{ "name": "Large",    "slug": "large",    "size": "clamp(1.333rem, 4vw, 1.5rem)" },
+				{ "name": "X-large",  "slug": "x-large",  "size": "clamp(2rem, 4vw, 2rem)" },
+				{ "name": "XX Large", "slug": "xx-large", "size": "clamp(2.5rem, 6vw, 2.5rem)" }
 			],
 			"customFontSize": false,
             "lineHeight": true,
@@ -95,7 +95,7 @@
 				{ "name": "2", "slug": "40", "size": "clamp(1rem, 4vw, 1.5rem)" },
 				{ "name": "3", "slug": "50", "size": "clamp(1.75rem, 4vw, 2.25rem)" },
 				{ "name": "4", "slug": "60", "size": "clamp(2.75rem, 4vw, 3.25rem)" },
-				{ "name": "5", "slug": "70", "size": "clamp(3.75rem, 4vw, 4.5rem)" }
+				{ "name": "5", "slug": "70", "size": "clamp(3.75rem, 5vw, 5rem)" }
 			],
 			"units": [ "%",	"px", "em", "rem", "vh", "vw" ]
 		},
