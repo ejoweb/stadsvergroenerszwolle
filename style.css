@@ -16,18 +16,6 @@ Text Domain: svz
 
 /* -------------------------------- GENERAL -------------------------------- */
 
-/*
- * Smooth scroll when `to top`-link is clicked
- */
-html {
-    scroll-behavior: smooth;
-}
-@media screen and (prefers-reduced-motion: reduce) {
-    html {
-        scroll-behavior: auto;
-    }
-}
-
 /* Spacing of group blocks with background */
 :where(.wp-block-group.has-background) {
 	padding-top: var(--wp--style--root--padding-top);
@@ -53,41 +41,55 @@ html {
  * Cover block 
  */
 .wp-block-cover {
-	padding-right: var(--wp--style--root--padding-right);
-  	padding-left: var(--wp--style--root--padding-left);
+	padding: var(--wp--preset--spacing--50);
 }
 
 .wp-block-cover.has-custom-content-position.is-position-bottom-center {
-	padding-bottom: 0;
-	margin-bottom: calc(var(--wp--preset--spacing--70) + var(--wp--style--block-gap));
 }
 
 .wp-block-cover.has-custom-content-position.is-position-bottom-center > .wp-block-cover__inner-container {
-	margin-bottom: calc(var(--wp--preset--spacing--70) * -1);
-	width: 100%;
 }
 
 .wp-block-cover.is-position-center-right,
 .wp-block-cover.is-position-top-right,
 .wp-block-cover.is-position-bottom-right {
-	padding-right: 0;
 }
 
 .wp-block-cover.is-position-center-left,
 .wp-block-cover.is-position-top-left,
 .wp-block-cover.is-position-bottom-left {
-	padding-left: 0;
+}
+
+/**
+ * Group block
+ */
+.wp-block-group.has-background {
+	padding: var(--wp--preset--spacing--40) var(--wp--preset--spacing--40);
 }
 
 
-/* -------------------------------- CONTEXT -------------------------------- */
+/* -------------------------------- LAYOUT -------------------------------- */
 
+/*
+ * Smooth scroll when `to top`-link is clicked
+ */
+html {
+    scroll-behavior: smooth;
+}
+@media screen and (prefers-reduced-motion: reduce) {
+    html {
+        scroll-behavior: auto;
+    }
+}
 
 /**
  * Site container 
  */
 .wp-site-blocks {
-	padding: 0;
+	padding-top: var(--wp--style--root--padding-top);
+	padding-bottom: var(--wp--style--root--padding-bottom);
+	padding-right: var(--wp--style--root--padding-right);
+	padding-left: var(--wp--style--root--padding-left);
 	max-width: var(--wp--custom--layout--full-size);
 	margin-right: auto;
 	margin-left: auto;
@@ -98,8 +100,12 @@ html {
  * Site header 
  */
 
-
-
+header.wp-block-template-part {
+	padding: 0;
+	max-width: var(--wp--custom--layout--full-size);
+	margin-right: auto;
+	margin-left: auto;
+}
 
 /**
  * Site main 
@@ -109,7 +115,7 @@ html {
 /**
  * Banner 
  */
-/* main > .wp-block-post-content:first-child > .wp-block-cover:first-child,
+main > .wp-block-post-content:first-child > .wp-block-cover:first-child,
 main > .wp-block-cover:first-child {
 	min-height: var(--wp--custom--spacing--banner-height);
 }
@@ -126,7 +132,7 @@ main > .wp-block-image:first-child img {
 	height: var(--wp--custom--spacing--banner-height);
 	object-fit: cover;
 	border-radius: 0;
-} */
+}
 
 
 /**

@@ -84,7 +84,7 @@
 		},
 		"layout": {
 			"contentSize": "40rem",
-			"wideSize": "56rem"
+			"wideSize": "64rem"
 		},
 		"spacing": {
 			"blockGap": true,
@@ -111,7 +111,7 @@
 				"medium": "10px"
 			},
 			"spacing": {
-				"bannerHeight": "clamp(12rem, 20vw, 16rem)"
+				"bannerHeight": "clamp(20rem, 50vw, 32rem)"
 			},
 			"layout": {
 				"fullSize": "75rem"
