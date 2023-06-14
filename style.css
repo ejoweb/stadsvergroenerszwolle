@@ -16,14 +16,6 @@ Text Domain: svz
 
 /* -------------------------------- GENERAL -------------------------------- */
 
-/* Spacing of group blocks with background */
-:where(.wp-block-group.has-background) {
-	padding-top: var(--wp--style--root--padding-top);
-	padding-bottom: var(--wp--style--root--padding-bottom);
-	padding-right: var(--wp--style--root--padding-right);
-	padding-left: var(--wp--style--root--padding-left);
-}
-
 /**
  * Global padding rules
  */
@@ -41,30 +33,45 @@ Text Domain: svz
  * Cover block 
  */
 .wp-block-cover {
-	padding: var(--wp--preset--spacing--50);
+	padding-top: var(--wp--style--root--padding-top);
+	padding-bottom: var(--wp--style--root--padding-bottom);
+	padding-right: var(--wp--style--root--padding-right);
+	padding-left: var(--wp--style--root--padding-left);
 }
 
-.wp-block-cover.has-custom-content-position.is-position-bottom-center {
+/* Fix colors of cover block */
+.wp-block-cover h1:not(.has-text-color), 
+.wp-block-cover h2:not(.has-text-color), 
+.wp-block-cover h3:not(.has-text-color), 
+.wp-block-cover h4:not(.has-text-color), 
+.wp-block-cover h5:not(.has-text-color), 
+.wp-block-cover h6:not(.has-text-color) {
+	color: var(--wp--preset--color--primary);
 }
 
-.wp-block-cover.has-custom-content-position.is-position-bottom-center > .wp-block-cover__inner-container {
+.wp-block-cover .has-text-color h1:not(.has-text-color), 
+.wp-block-cover .has-text-color h2:not(.has-text-color), 
+.wp-block-cover .has-text-color h3:not(.has-text-color), 
+.wp-block-cover .has-text-color h4:not(.has-text-color), 
+.wp-block-cover .has-text-color h5:not(.has-text-color), 
+.wp-block-cover .has-text-color h6:not(.has-text-color) {
+	color: inherit;
 }
 
-.wp-block-cover.is-position-center-right,
-.wp-block-cover.is-position-top-right,
-.wp-block-cover.is-position-bottom-right {
+.wp-block-cover.is-light .wp-block-cover__inner-container {
+	color: var(--wp--preset--color--contrast);
 }
 
-.wp-block-cover.is-position-center-left,
-.wp-block-cover.is-position-top-left,
-.wp-block-cover.is-position-bottom-left {
+/* Groups inside covers */
+.wp-block-cover .wp-block-group {
+	padding: 0;
 }
 
 /**
  * Group block
  */
-.wp-block-group.has-background {
-	
+:where(.wp-block-group.has-background) {
+
 }
 
 /**
@@ -112,7 +119,6 @@ html {
 	margin-left: auto;
 }
 
-
 /**
  * Site header 
  */
@@ -144,14 +150,6 @@ header .wp-block-navigation-item__content {
 	text-underline-offset: 6px;
 }
 
-/* header .wp-block-navigation-item.current-menu-item .wp-block-navigation-item__content,
-header .wp-block-navigation-item:hover .wp-block-navigation-item__content {
-	text-decoration: underline;
-	text-decoration-thickness: 4px;
-	text-decoration-color: var(--wp--preset--color--secondary);
-	text-underline-offset: 6px;
-} */
-
 header .wp-block-navigation-item.uitgelicht .wp-block-navigation-item__content {
 
 	/* Button */
@@ -163,7 +161,8 @@ header .wp-block-navigation-item.uitgelicht .wp-block-navigation-item__content {
 }
 
 
-header .wp-block-navigation__responsive-container-close svg, .wp-block-navigation__responsive-container-open svg {
+header .wp-block-navigation__responsive-container-close svg, 
+header .wp-block-navigation__responsive-container-open svg {
 	width: 36px;
 	height: 36px;
 }
@@ -190,8 +189,6 @@ main > .wp-block-post-content:first-child > .wp-block-cover:first-child > .wp-bl
 	padding: var(--wp--preset--spacing--40) var(--wp--preset--spacing--50);
 	border-radius: var(--wp--custom--border-radius--small);
 }
-	
-
 
 
 /**
@@ -204,6 +201,10 @@ footer.wp-block-template-part {
 
 
 /* ----------------------------- CUSTOM CLASSES ----------------------------- */
+
+
+
+/* ------------------------------- TEMPLATES -------------------------------- */
 
 
 
@@ -220,10 +221,19 @@ footer.wp-block-template-part {
 
 }
 
-/* Breakpoint for tiny screens */
-@media screen and (max-width: 480px) {
-		
+/* Breakpoint for small screens */
+@media screen and (max-width: 720px) {
+
 
 }
 
-/* ------------------------------- TEMPLATES -------------------------------- */
+/* Breakpoint for tiny screens */
+@media screen and (max-width: 480px) {
+	
+	.wp-site-blocks {
+		padding-bottom: 0rem;
+		padding-right: 0rem;
+		padding-left: 0rem;
+	}
+
+}
