@@ -181,13 +181,25 @@ header .wp-block-navigation__responsive-container.is-menu-open .wp-block-navigat
 /**
  * Site Banner 
  */
-main > .wp-block-post-content:first-child > .wp-block-cover:first-child {
+main > .wp-block-post-content > .wp-block-cover:first-child {
 	min-height: var(--wp--custom--spacing--banner-height);
 }
 
-main > .wp-block-post-content:first-child > .wp-block-cover:first-child > .wp-block-cover__inner-container > .wp-block-group.has-background {
+main > .wp-block-post-content > .wp-block-cover:first-child > .wp-block-cover__inner-container > .wp-block-group.has-background {
 	padding: var(--wp--preset--spacing--40) var(--wp--preset--spacing--50);
 	border-radius: var(--wp--custom--border-radius--small);
+}
+
+
+/**
+ * Site contact near footer 
+ */
+
+/* Set image to bottom of container and within container */
+main > .wp-block-post-content > .wp-block-cover:last-child > .wp-block-cover__image-background {
+	object-fit: contain;
+	height: auto;
+	top: auto;
 }
 
 
