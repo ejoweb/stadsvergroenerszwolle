@@ -23,7 +23,9 @@ add_action( 'after_setup_theme', function() {
 
 	// Enqueue scripts and styles to the editor
 	add_action( 'enqueue_block_editor_assets', 'svz_add_editor_styles_and_scripts' );
-	
+
+	// Add block styles (classes)
+	// add_action( 'init', 'svz_register_block_styles' );
 } );
 
 
@@ -83,4 +85,19 @@ function svz_add_editor_styles_and_scripts() {
 
 	// Enqueue theme stylesheet.
 	wp_enqueue_style( 'svz-style-for-editor' );
+}
+
+/**
+ * Add block styles (classes)
+ */
+function svz_register_block_styles() {
+
+	// Special group block
+    register_block_style(
+        'core/button', // name of your block
+        array(
+            'name'  => 'ghub-button-1', // part of the class that gets added to the block.
+            'label' => __( ' Ghub Style 1', 'style-1' ),
+        )
+    );
 }

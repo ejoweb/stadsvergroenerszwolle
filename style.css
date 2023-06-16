@@ -77,19 +77,7 @@ Text Domain: svz
 /**
  * Columns block
  */
-.wp-block-columns.large-right .wp-block-column {
-	flex-grow: 5;
-}
-.wp-block-columns.large-right .wp-block-column:last-child {
-	flex-grow: 6;
-}
 
-.wp-block-columns.large-left .wp-block-column {
-	flex-grow: 5;
-}
-.wp-block-columns.large-left .wp-block-column:first-child {
-	flex-grow: 6;
-}
 
 
 /* -------------------------------- LAYOUT -------------------------------- */
@@ -214,6 +202,29 @@ footer.wp-block-template-part {
 
 /* ----------------------------- CUSTOM CLASSES ----------------------------- */
 
+.wp-block-group.four-image-group {
+	display: grid;
+	grid-template-columns: fit-content(175px) fit-content(175px);
+}
+
+.wp-block-columns.content-right .wp-block-column {
+	flex-grow: 5;
+}
+.wp-block-columns.content-right .wp-block-column:last-child {
+	flex-grow: 6;
+}
+
+.wp-block-columns.content-left .wp-block-column {
+	flex-grow: 5;
+}
+.wp-block-columns.content-left .wp-block-column:first-child {
+	flex-grow: 6;
+}
+
+.wp-block-columns.content-left .wp-block-column .wp-block-image,
+.wp-block-columns.content-right .wp-block-column .wp-block-image {
+	max-width: 360px;
+}
 
 
 /* ------------------------------- TEMPLATES -------------------------------- */
