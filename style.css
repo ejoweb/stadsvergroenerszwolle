@@ -170,12 +170,14 @@ header.wp-block-template-part .wp-block-navigation__responsive-container.is-menu
 
 /**
  * Site Banner 
+ *
+ * Note: we don't use `main` as selector because `main` is not present in the post-editor
  */
-main > .wp-block-post-content > .wp-block-cover:first-child {
+.wp-block-post-content > .wp-block-cover:first-child {
 	min-height: var(--wp--custom--spacing--banner-height);
 }
 
-main > .wp-block-post-content > .wp-block-cover:first-child > .wp-block-cover__inner-container > .wp-block-group.has-background {
+.wp-block-post-content > .wp-block-cover:first-child > .wp-block-cover__inner-container > .wp-block-group.has-background {
 	padding: var(--wp--preset--spacing--40) var(--wp--preset--spacing--50);
 	border-radius: var(--wp--custom--border-radius--small);
 }
@@ -183,10 +185,18 @@ main > .wp-block-post-content > .wp-block-cover:first-child > .wp-block-cover__i
 
 /**
  * Site contact near footer 
+ *
+ * Notes: 
+ * - we don't use `main` as selector because `main` is not present in the post-editor
+ * - we use `div:last-of-type` to also target the post-editor
  */
 
+.wp-block-post-content > div.wp-block-cover:last-of-type {
+	padding-top: 0;
+}
+
 /* Set image to bottom of container and within container */
-main > .wp-block-post-content > .wp-block-cover:last-child > .wp-block-cover__image-background {
+.wp-block-post-content > div.wp-block-cover:last-of-type > .wp-block-cover__image-background {
 	object-fit: contain;
 	height: auto;
 	top: auto;
