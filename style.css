@@ -157,11 +157,6 @@ header.wp-block-template-part .wp-block-navigation__responsive-container-open sv
 	height: 36px;
 }
 
-/* Mobile */
-header.wp-block-template-part .wp-block-navigation__responsive-container.is-menu-open .wp-block-navigation__responsive-container-content .wp-block-navigation-item__content {
-
-}
-
 /**
  * Site Banner 
  *
@@ -286,6 +281,7 @@ footer.wp-block-template-part {
 
 	header.wp-block-template-part .wp-block-navigation__responsive-container.is-menu-open .wp-block-navigation__responsive-container-content {
 		padding-top: calc(var(--wp--preset--spacing--70) + 36px);
+		font-size: var(--wp--preset--font-size--large);
 	}
 
 	header.wp-block-template-part .wp-block-navigation__responsive-container.is-menu-open .wp-block-navigation__responsive-container-content .wp-block-navigation__container {
