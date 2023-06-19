@@ -7,7 +7,7 @@ Description: WordPress blokkenthema voor Stadsvergroeners Zwolle
 Requires at least: 6.2
 Tested up to: 6.2
 Requires PHP: 7.4
-Version: 0.1
+Version: 1.0
 License: GNU General Public License v2 or later
 License URI: http://www.gnu.org/licenses/gpl-2.0.html
 Text Domain: svz
@@ -162,12 +162,6 @@ header.wp-block-template-part .wp-block-navigation__responsive-container.is-menu
 
 }
 
-
-/**
- * Site main 
- */
-
-
 /**
  * Site Banner 
  *
@@ -184,7 +178,7 @@ header.wp-block-template-part .wp-block-navigation__responsive-container.is-menu
 
 
 /**
- * Site contact near footer 
+ * Site contact near footer (call to action)
  *
  * Notes: 
  * - we don't use `main` as selector because `main` is not present in the post-editor

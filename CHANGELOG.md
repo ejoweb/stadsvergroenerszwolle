@@ -1,7 +1,16 @@
 # Changelog
 
-Reminder: also add date to each version
+Reminder: 
+- add date to each version
+- start each change with [improve, added, fixed]
+
+## 1.0 - 2023-06-19
+
+- Improved minor style issues
+- Improved mobile navigation
+- Added patterns
+- Fixed editor differences
 
 ## 0.1 - 2023-06-14
 
-- Prototype
+- Set up prototype
