@@ -26,6 +26,9 @@ add_action( 'after_setup_theme', function() {
 
 	// Add block styles (classes)
 	// add_action( 'init', 'svz_register_block_styles' );
+
+	// Disable styles of plugin Lightweight accordion	 
+	add_filter('lightweight_accordion_include_frontend_stylesheet', '__return_false' );
 } );
 
 
