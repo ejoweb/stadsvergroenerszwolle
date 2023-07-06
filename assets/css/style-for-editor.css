@@ -17,3 +17,10 @@ The goal is to keep this file to a minimum.
 	padding-left: var(--wp--style--root--padding-left);
 	padding-right: var(--wp--style--root--padding-right);
 }
+
+/* Better identification of Lightweight accordion */
+.block-editor-block-list__block .lightweight-accordion {
+	padding: var(--wp--preset--spacing--30);
+	border: 2px dashed #e0e0e0;
+}
+

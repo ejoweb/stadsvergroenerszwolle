@@ -29,6 +29,7 @@ add_action( 'after_setup_theme', function() {
 
 	// Disable styles of plugin Lightweight accordion	 
 	add_filter('lightweight_accordion_include_frontend_stylesheet', '__return_false' );
+	add_filter('lightweight_accordion_include_admin_stylesheet', '__return_false' );
 } );
 
 

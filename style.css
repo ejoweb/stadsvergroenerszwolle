@@ -232,28 +232,31 @@ footer.wp-block-template-part {
  */
 
 .lightweight-accordion.bordered {
-	border-bottom: 2px solid var(--wp--preset--color--contrast);
+	border-bottom: 1px solid var(--wp--preset--color--secondary);
+	padding-bottom: var(--wp--preset--spacing--40);
 }
 
 .lightweight-accordion .lightweight-accordion-title {
-	display: block;
+	display: flex;
+	justify-content: space-between;
+	align-items: center;
 	cursor: pointer;
 }
 
-.lightweight-accordion .lightweight-accordion-title p,
-.lightweight-accordion .lightweight-accordion-title span,
-.lightweight-accordion .lightweight-accordion-title h1,
-.lightweight-accordion .lightweight-accordion-title h2,
-.lightweight-accordion .lightweight-accordion-title h3 {
-	display: inline;
-}
-
 .lightweight-accordion .lightweight-accordion-title > * {
-	position: relative;
-	padding-right: 1em;
+	margin: 0;
 }
 
-.lightweight-accordion .lightweight-accordion-title > *:after {
+.lightweight-accordion .lightweight-accordion-title > span {
+	font-family: var(--wp--preset--font-family--poppins);
+	font-weight: 600;
+	font-size: var(--wp--preset--font-size--x-large);
+	line-height: var(--wp--custom--typography--line-height--small);
+	color: var(--wp--preset--color--primary);
+}
+
+/* Marker */
+.lightweight-accordion .lightweight-accordion-title:after {
 	/**
 	 * Content
 	 * - \25B8 = black-right-pointing-small-triangle
@@ -261,27 +264,27 @@ footer.wp-block-template-part {
 	 * - Custom: url('data:image/svg+xml; utf8, <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 40 40" width="25" height="25"><path d="m15.5 0.932-4.3 4.38 14.5 14.6-14.5 14.5 4.3 4.4 14.6-14.6 4.4-4.3-4.4-4.4-14.6-14.6z"></path></svg>');
 	 */
 	content: '\25B8';
+	color: var(--wp--preset--color--tertiary);
 
-	display: flex;
-	align-items: center;
-	justify-content: center;
-
-	/* transform: rotate(90deg); */
-	position: absolute;
-	right: 0;
-	top: 0;
-	margin-top: 0.15em;
-
-	/* transition: $transition-fast; */
+	font-size: var(--wp--preset--font-size--x-large);
+	margin-left: var(--wp--preset--spacing--30);
+	line-height: 1;
 }
 
 /* Opened accordion */
-.lightweight-accordion details[open] .lightweight-accordion-title > *:after {
+.lightweight-accordion details[open] .lightweight-accordion-title:after {
 
-	content: '\25BE'; // black-down-pointing-small-triangle
-	/* transform: rotate(90deg) scale(-1, 1); */
+	content: '\25BE'; /* black-down-pointing-small-triangle */
 }
 
+.lightweight-accordion .lightweight-accordion-body > * {
+	margin-block-start: var(--wp--preset--spacing--40);
+	margin-block-end: 0;
+}
+
+.lightweight-accordion .lightweight-accordion-body > * + * {
+	margin-block-start: var(--wp--preset--spacing--40);
+}
 
 /* ------------------------------- TEMPLATES -------------------------------- */
 
