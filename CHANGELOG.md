@@ -4,9 +4,11 @@ Reminder:
 - add date to each version
 - start each change with [improve, added, fixed]
 
-## WIP
+## 1.1 - 2023-08-22
 
 - Added support for lightweight accordion
+- Fixed Navigation block style for wp6.3 (double class `.wp-block-navigation`)
+- Checked compatibility with wp6.3
 
 ## 1.0 - 2023-06-19
 
