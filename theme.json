@@ -87,7 +87,7 @@
 			"typography": {
 				"line-height": {
 					"normal": 1.5,
-					"small": 1
+					"small": 1.1
 				}
 			}
 		},
@@ -102,26 +102,31 @@
 			"spacingSizes": [
 				{
 					"name": "1",
-					"size": "clamp(0.5rem, 2vw, 0.625rem)",
-					"slug": "20"
+					"size": "clamp(0.25rem, 2vw, 0.375rem)",
+					"slug": "10"
 				},
 				{
 					"name": "2",
-					"size": "clamp(1rem, 2.5vw, 1.25rem)",
-					"slug": "30"
+					"size": "clamp(0.5rem, 2vw, 0.75rem)",
+					"slug": "20"
 				},
 				{
 					"name": "3",
-					"size": "clamp(1.5rem, 4vw, 2rem)",
-					"slug": "40"
+					"size": "clamp(1rem, 2.5vw, 1.5rem)",
+					"slug": "30"
 				},
 				{
 					"name": "4",
-					"size": "clamp(2rem, 5vw, 3rem)",
-					"slug": "50"
+					"size": "clamp(1.5rem, 4vw, 2.25rem)",
+					"slug": "40"
 				},
 				{
 					"name": "5",
+					"size": "clamp(2rem, 5vw, 3.25rem)",
+					"slug": "50"
+				},
+				{
+					"name": "6",
 					"size": "clamp(2.5rem, 5vw, 4.5rem)",
 					"slug": "60"
 				}
@@ -196,7 +201,7 @@
 				},
 				{
 					"name": "Large",
-					"size": "clamp(1.125rem, 3vw, 1.375rem)",
+					"size": "clamp(1.125rem, 3vw, 1.5rem)",
 					"slug": "large"
 				},
 				{
