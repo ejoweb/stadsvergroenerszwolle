@@ -61,9 +61,9 @@
 				}
 			],
 			"fontSizes": [
-				{ "name": "Small",    "slug": "small",    "size": "clamp(0.875rem, 3vw, 1rem)" },
-				{ "name": "Medium",   "slug": "medium",   "size": "clamp(1rem, 3vw, 1.125rem)" },
-				{ "name": "Large",    "slug": "large",    "size": "clamp(1.125rem, 4vw, 1.5rem)" },
+				{ "name": "Small",    "slug": "small",    "size": "clamp(0.875rem, 2vw, 1rem)" },
+				{ "name": "Medium",   "slug": "medium",   "size": "clamp(1rem, 2vw, 1.125rem)" },
+				{ "name": "Large",    "slug": "large",    "size": "clamp(1.125rem, 3vw, 1.375rem)" },
 				{ "name": "X-large",  "slug": "x-large",  "size": "clamp(1.5rem, 5vw, 2rem)" },
 				{ "name": "XX Large", "slug": "xx-large", "size": "clamp(1.5rem, 5vw, 2.5rem)" }
 			],
@@ -91,18 +91,18 @@
 			"margin": true,
 			"padding": true,
 			"spacingSizes": [
-				{ "name": "1", "slug": "30", "size": "clamp(0.5rem, 2vw, 0.75rem)" },
-				{ "name": "2", "slug": "40", "size": "clamp(1rem, 3vw, 1.5rem)" },
-				{ "name": "3", "slug": "50", "size": "clamp(1.5rem, 4vw, 2.25rem)" },
-				{ "name": "4", "slug": "60", "size": "clamp(2.5rem, 5vw, 3.25rem)" },
-				{ "name": "5", "slug": "70", "size": "clamp(3.75rem, 5vw, 5rem)" }
+				{ "name": "1", "slug": "20", "size": "clamp(0.5rem, 2vw, 0.625rem)" },  
+				{ "name": "2", "slug": "30", "size": "clamp(1rem, 2.5vw, 1.25rem)" }, 
+				{ "name": "3", "slug": "40", "size": "clamp(1.5rem, 4vw, 2rem)" }, 
+				{ "name": "4", "slug": "50", "size": "clamp(2rem, 5vw, 3rem)" },
+				{ "name": "5", "slug": "60", "size": "clamp(2.5rem, 5vw, 4.5rem)" }
 			],
 			"units": [ "%",	"px", "em", "rem", "vh", "vw" ]
 		},
 		"custom": {
 			"typography": {
 				"line-height": {
-					"small": 1.1,
+					"small": 1,
 					"normal": 1.5
 				}
 			},
@@ -130,12 +130,12 @@
 			"fontWeight": "300"
 		},
 		"spacing": {
-			"blockGap": "var(--wp--preset--spacing--50)",
+			"blockGap": "var(--wp--preset--spacing--40)",
 			"padding": {
 				"top": "var(--wp--preset--spacing--50)",
-				"right": "var(--wp--preset--spacing--60)",
+				"right": "clamp(1.5rem, 8vw, 4.5rem)",
 				"bottom": "var(--wp--preset--spacing--50)",
-				"left": "var(--wp--preset--spacing--60)"
+				"left": "clamp(1.5rem, 8vw, 4.5rem)"
 			}
 		},
 		"elements": {

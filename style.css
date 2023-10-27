@@ -17,6 +17,25 @@ Text Domain: svz
 /* -------------------------------- GENERAL -------------------------------- */
 
 /**
+ * Typography
+ */
+strong {
+	font-weight: 600;
+}
+
+/**
+ * Links
+ */
+.wp-block-cover a,
+.wp-block-post-title a {
+	text-decoration: none;
+}
+.wp-block-cover a:hover,
+.wp-block-post-title a:hover {
+	text-decoration: underline;
+}
+
+/**
  * Global padding rules
  */
 .has-global-padding :where(.has-global-padding) {
@@ -162,14 +181,26 @@ header.wp-block-template-part .wp-block-navigation__responsive-container-open sv
  * Site Banner 
  *
  * Note: we don't use `main` as selector because `main` is not present in the post-editor
+ * Note: but we do use `main` when the banner is outside the post content (because site-editor)
  */
+main > .wp-block-cover:first-child,
 .wp-block-post-content > .wp-block-cover:first-child {
 	min-height: var(--wp--custom--spacing--banner-height);
 }
 
+main > .wp-block-cover:first-child > .wp-block-cover__inner-container > .wp-block-group.has-background,
 .wp-block-post-content > .wp-block-cover:first-child > .wp-block-cover__inner-container > .wp-block-group.has-background {
-	padding: var(--wp--preset--spacing--40) var(--wp--preset--spacing--50);
+	padding: var(--wp--preset--spacing--30) var(--wp--preset--spacing--40);
 	border-radius: var(--wp--custom--border-radius--small);
+	max-width: 720px;
+}
+
+/**
+ * Blog posts
+ */
+.wp-block-post-template-is-layout-grid .wp-block-post {
+	display: grid;
+	grid-template-rows: auto 1fr;
 }
 
 
@@ -181,12 +212,14 @@ header.wp-block-template-part .wp-block-navigation__responsive-container-open sv
  * - we use `div:last-of-type` to also target the post-editor
  */
 
-.wp-block-post-content > div.wp-block-cover:last-of-type {
+.wp-block-post-content > div.wp-block-cover:last-of-type,
+footer.wp-block-template-part > div.wp-block-cover {
 	padding-top: 0;
 }
 
 /* Set image to bottom of container and within container */
-.wp-block-post-content > div.wp-block-cover:last-of-type > .wp-block-cover__image-background {
+.wp-block-post-content > div.wp-block-cover:last-of-type > .wp-block-cover__image-background,
+footer.wp-block-template-part > div.wp-block-cover > .wp-block-cover__image-background {
 	object-fit: contain;
 	height: auto;
 	top: auto;
@@ -370,3 +403,12 @@ footer.wp-block-template-part {
 	}
 
 }
+
+/* Breakpoint for tiny screens */
+/* @media screen and (max-width: 360px) {
+
+	body {
+		--wp--style--root--padding-left: var(--wp--preset--spacing--40);
+		--wp--style--root--padding-right: var(--wp--preset--spacing--40);
+	}
+} */
