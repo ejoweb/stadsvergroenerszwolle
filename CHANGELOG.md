@@ -4,6 +4,11 @@ Reminder:
 - add date to each version
 - start each change with [improve, added, fixed]
 
+## 1.2 - 2023-10-30
+- Integrated blogfeature for "inspiration"
+- Added support for dropdown navigation
+- Improved spacing and layout
+
 ## 1.1 - 2023-08-22
 
 - Added support for lightweight accordion
