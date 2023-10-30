@@ -150,24 +150,40 @@ header.wp-block-template-part .wp-block-navigation__container {
 
 }
 
-header.wp-block-template-part .wp-block-navigation-item {}
+header.wp-block-template-part .wp-block-navigation-item {
+	line-height: var(--wp--custom--typography--line-height--small);
+}
 
 
-header.wp-block-template-part .wp-block-navigation-item__content {
+/* First level items */
+header.wp-block-template-part .wp-block-navigation__container > .wp-block-navigation-item > .wp-block-navigation-item__content {
 	text-decoration: underline;
 	text-decoration-thickness: 4px;
 	text-decoration-color: var(--wp--preset--color--secondary);
 	text-underline-offset: 6px;
+	padding: var(--wp--preset--spacing--20) 0 !important;
 }
 
-header.wp-block-template-part .wp-block-navigation-item.uitgelicht .wp-block-navigation-item__content {
+/* Custom menu item: is-button */
+header.wp-block-template-part .wp-block-navigation-item.is-button .wp-block-navigation-item__content {
 
 	/* Button */
 	background-color: var(--wp--preset--color--tertiary);
 	color: var(--wp--preset--color--base);
-	padding: var(--wp--preset--spacing--30) !important;
+	padding: var(--wp--preset--spacing--20) !important;
 	text-decoration: none !important;
 	border-radius: var(--wp--custom--border-radius--small);
+}
+
+/* Sub menu hover */
+header.wp-block-template-part .wp-block-navigation__container > .wp-block-navigation-item.has-child:hover > .wp-block-navigation-item__content {
+	text-decoration: none;
+}
+
+header.wp-block-template-part .wp-block-navigation .has-child .wp-block-navigation-submenu {
+	border: 0;
+	padding: var(--wp--preset--spacing--20);
+	background-color: var(--wp--preset--color--secondary);
 }
 
 
@@ -378,6 +394,16 @@ footer.wp-block-template-part {
 
 	header.wp-block-template-part .wp-block-navigation__responsive-container.is-menu-open .wp-block-navigation__responsive-container-content .wp-block-navigation__container {
 		/* row-gap: var(--wp--preset--spacing--40); */
+	}
+
+	/* Submenu container */
+	header.wp-block-template-part .wp-block-navigation__responsive-container.is-menu-open .has-child .wp-block-navigation__submenu-container {
+		/* padding-top: var(--wp--preset--spacing--20); */
+	}
+
+	/* Submenu item */
+	header.wp-block-template-part .wp-block-navigation__responsive-container.is-menu-open .has-child  .wp-block-navigation__submenu-container .wp-block-navigation-item {
+		padding-top: var(--wp--preset--spacing--30);
 	}
 }
 
